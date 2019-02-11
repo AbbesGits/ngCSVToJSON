@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "papaObsWrap": {
+      "root": "projects/papa-obs-wrap",
+      "sourceRoot": "projects/papa-obs-wrap/src",
+      "projectType": "library",
+      "prefix": "pow",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/papa-obs-wrap/tsconfig.lib.json",
+            "project": "projects/papa-obs-wrap/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/papa-obs-wrap/src/test.ts",
+            "tsConfig": "projects/papa-obs-wrap/tsconfig.spec.json",
+            "karmaConfig": "projects/papa-obs-wrap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/papa-obs-wrap/tsconfig.lib.json",
+              "projects/papa-obs-wrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "CSVToJSON-demo"

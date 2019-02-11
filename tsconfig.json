@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "papa-obs-wrap": [
+        "dist/papa-obs-wrap"
+      ],
+      "papa-obs-wrap/*": [
+        "dist/papa-obs-wrap/*"
+      ]
+    }
   }
 }
